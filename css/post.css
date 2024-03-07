@@ -1,1 +1,82 @@
 @import url('./global.css');
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.grid-container .blog-content {
+  padding-bottom: 50px;
+}
+.grid-container .blog-content {
+  grid-area: blogContent;
+}
+.grid-container .aside-content {
+  grid-area: blogAside;
+}
+
+.grid-container {
+  display: grid;
+  column-gap: 30px;
+  grid-template-areas:
+    'header header header header'
+    'blogContent blogContent blogContent blogAside'
+    'footer footer footer footer';
+}
+
+.grid-container .image-content {
+  margin-bottom: 2rem;
+}
+
+.image-content .blog-image {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+.image-content .image-detail {
+  font-size: small;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.blog-info-title {
+  margin-bottom: 0.5rem;
+}
+
+.aside-content .aside-title {
+  margin-bottom: 0.5rem;
+}
+.aside-content .block {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.aside-content .link-box {
+  font-size: small;
+}
+.aside-content .outline-content .link-box > li {
+  list-style-type: circle;
+}
+
+.tips-section h3 {
+  display: inline-block;
+  font-size: 13pt;
+  margin-bottom: 0.5rem;
+}
+.tips-section {
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+.tips-section h3 > span {
+  margin-left: 5px;
+  display: inline-block;
+}
+.relative-content {
+  border-top: 1px solid rgba(0, 0, 0, 0.02);
+  padding: 15px 0px;
+}
