@@ -1,1 +1,119 @@
 @import url('./global.css');
+
+.outer-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  /* display: flex;
+  flex-direction: row;
+  flex-flow: row wrap; */
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+
+.blog-item {
+  /* flex: 1 1; */
+  /* row-gap column gap */
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 1rem;
+  height: 250px;
+  position: relative;
+  width: calc(50% - 3rem);
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.07);
+  margin-top: 0px;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.blog-item:hover,
+.blog-item:active,
+.blog-item:focus {
+  border: 2px solid royalblue;
+  margin-top: -5px;
+  margin-bottom: 25px;
+}
+/* blog-item: odd */
+.blog-item:nth-child(2n-1) {
+  margin-right: 0.5rem;
+}
+/* blog-item: even */
+.blog-item:nth-child(2n) {
+  margin-left: 0.5rem;
+}
+
+.blog-item .blog-tag {
+  background-color: royalblue;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  font-size: small;
+}
+
+.blog-item .blog-tag.green {
+  background-color: green;
+}
+
+.blog-item .blog-title {
+  font-size: 15pt;
+  margin-bottom: 0.2rem;
+}
+
+.blog-item .blog-date {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: small;
+}
+
+.blog-item .blog-detail {
+  margin-top: 0.5rem;
+}
+
+.blog-item .blog-more {
+  display: inline-block;
+  bottom: 0px;
+  padding: 1rem 0px 0px 0px;
+  text-align: right;
+  width: 100%;
+  text-decoration: none;
+  position: absolute;
+  bottom: 1rem;
+  right: 10px;
+  font-size: small;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.blog-item:hover .blog-more,
+.blog-item:active .blog-more,
+.blog-item:focus .blog-more {
+  color: rgba(0, 0, 0, 0.8);
+}
+.blog-item .bookmark {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: -3px;
+}
+
+.blog-title-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+  .blog-item,
+  .blog-item:nth-child(2n-1),
+  .blog-item:nth-child(2n) {
+    width: calc(100% - 3rem);
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
