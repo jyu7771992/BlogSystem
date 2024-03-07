@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.outer-container {
+  width: 750px;
+  height: auto;
+  overflow: hidden;
+}
+
+.page-title {
+  text-decoration-line: underline;
+}
+
+header {
+}
+
+footer {
+  background-color: gainsboro;
+}
