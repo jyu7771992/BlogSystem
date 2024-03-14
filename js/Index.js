@@ -618,7 +618,6 @@ function pagination(info, currentPage, totalInPage) {
   const firstPost = (currentPage - 1) * totalInPage;
   const lastPost = firstPost + totalInPage;
   const allItems = info.slice(firstPost, lastPost);
-  console.log(allItems);
   return allItems;
 }
 let previous = null; // call the function
@@ -653,7 +652,6 @@ function renderPost(info, cur) {
       <a class="blog-more" href="post.html">Read More</a>
         `;
     //add the components in the blog-container
-    console.log(postCard);
     blogContainer.appendChild(postCard);
   });
 }
@@ -668,7 +666,6 @@ function pageLinkRender(count, paginationContainer) {
     pageLink.addEventListener('click', () => {
       currentPage = i;
       const pageInfo = pagination(info, currentPage, totalInPage); //allItems
-      console.log(currentPage, i, pageInfo);
       renderPost(pageInfo, i);
     });
 
