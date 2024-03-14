@@ -9,6 +9,7 @@
   flex-flow: row wrap; */
   padding-bottom: 30px;
   padding-top: 10px;
+  min-height: 500px;
 }
 
 .blog-item {
